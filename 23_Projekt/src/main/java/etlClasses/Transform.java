@@ -70,7 +70,12 @@ public class Transform {
 		review.setAutor(review.getAutor().replace("ó", "o"));
 		review.setAutor(review.getAutor().replace("ś", "s"));
 		review.setAutor(review.getAutor().replace("ł", "l"));
-	
+
+		review.setAutor(review.getAutor().replace("'", " "));
+		review.setPodsumowanie(review.getPodsumowanie().replace("'", " "));
+		review.setZaletyProduktu(review.getZaletyProduktu().replace("'", " "));
+		review.setWadyProduktu(review.getWadyProduktu().replace("'", " "));
+		
 		return review;
 	}
 	
@@ -115,6 +120,11 @@ public class Transform {
 		product.setDodatkoweUwagi(product.getDodatkoweUwagi().replace("ó", "o"));
 		product.setDodatkoweUwagi(product.getDodatkoweUwagi().replace("ś", "s"));
 		product.setDodatkoweUwagi(product.getDodatkoweUwagi().replace("ł", "l"));
+
+		product.setDodatkoweUwagi(product.getDodatkoweUwagi().replace("'", " "));
+		product.setModelProduktu(product.getModelProduktu().replace("'", " "));
+		product.setMarkaProduktu(product.getMarkaProduktu().replace("'", " "));
+		product.setRodzajProduktu(product.getRodzajProduktu().replace("'", " "));
 		return product;
 	}
 }
